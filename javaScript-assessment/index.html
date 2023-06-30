@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css">
+    <title>restaurant booking</title>
+  </head>
+  <body>
+    <div class="center">
+      <h1>Restaurant Booking</h1>
+      <form id="bookingid">
+        <lable for="bookingtype">Choice of Booking:</lable>
+        <select  id="bookingtype" onchange="handleBookings()">  <!--functions for booking types-->
+          <option value="fullday">Full Day Booking</option>
+          <option value="halfday">Half Day Booking</option>
+          <option value="hourly">Hourly Booking</option>
+        </select>
+        <br><br>
+
+        <lable for="username">Username:</lable>
+          <input type="text" required> <br><br>
+
+        <lable>Mobile No.</lable>
+          :<input type="tel" required><br><br>
+
+        <lable>Email:</lable>
+          <input type="email" required><br><br>
+
+        <lable>No of person:</lable>
+          <input type="number" required><br><br>
+
+          <!-- for fullday booking -->
+        <div id="dateField">
+          <lable>Date:</lable>
+          <input type="date" required><br><br>
+        </div>
+
+        <!--for halfday booking  -->
+
+        <div id="slotField" class="hidden">
+          <label for="slot">Slot:</label>
+          <select id="slot" role="">
+            <option value="breakfast">Breakfast</option>
+            <option value="lunch">Lunch</option>
+            <option value="dinner">Dinner</option>
+          </select>
+          <br><br>
+        </div>
+
+        <!-- for hourly booking  -->
+        <div id="timeField" class="hidden">
+          <label for="time">Time:</label>
+            <input type="time" name="time" id="time" required>
+        </div>
+        <br><br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </body>
+
+  <script src="script.js"></script>
+</html>
